@@ -10,3 +10,5 @@ Not required. Just download AnsiToUtf8.exe command line utility to your computer
 where
 * source.pas - ANSI-encoded file to be converted,
 * codepage - ANSI codepage. 1251 by default.
+
+It can be used in a batch file for bulk transcoding.

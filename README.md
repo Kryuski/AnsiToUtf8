@@ -11,4 +11,6 @@ where
 * source.pas - ANSI-encoded file to be converted,
 * codepage - ANSI codepage. 1251 by default.
 
-It can be used in a batch file for bulk transcoding.
+It can be used in a batch file for bulk transcoding. For example,
+
+`for %i in (*.pas) do ansitoutf8.exe "%i"`

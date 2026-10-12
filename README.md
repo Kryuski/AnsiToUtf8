@@ -1,16 +1,35 @@
-# ANSI to UTF-8 file converter
-Command line utility to convert ANSI encoded files to UTF-8.
+# ANSI to UTF-8 File Converter
+
+Command-line utility to convert ANSI-encoded files to UTF-8 with a BOM (Byte Order Mark).
 
 ## Installation
-Not required. Just download AnsiToUtf8.exe command line utility to your computer.
+
+No installation required. Just download `AnsiToUtf8.exe` and run it from the command line.
 
 ## Usage
-`AnsiToUtf8 source.pas [codepage]`
 
-where
-* source.pas - ANSI-encoded file to be converted,
-* codepage - ANSI codepage. 1251 by default.
+```text
+AnsiToUtf8 <file_mask> [codepage]
+```
 
-It can be used in a batch file for bulk transcoding. For example,
+where:
 
-`for %i in (*.pas) do ansitoutf8.exe "%i"`
+- `file_mask` — file name or mask of files to convert, e.g. `source.pas` or `*.pas`.
+- `codepage` — source ANSI code page. Defaults to 1251.
+
+Examples:
+
+```bat
+AnsiToUtf8 source.pas
+AnsiToUtf8 *.pas
+AnsiToUtf8 Source\*.pas 1252
+```
+
+## Features
+
+- Converts a single file or multiple files matching a mask.
+- Adds a UTF-8 BOM (`EF BB BF`) to converted files.
+- Skips files that already have a UTF-8 BOM.
+- Creates a `.bak` backup of the original file before conversion.
+
+The utility can also be used in batch files for bulk conversion.

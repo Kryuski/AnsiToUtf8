@@ -49,6 +49,9 @@
 *.cfg
 *.hpp
 *Resource.rc
+*.delphilsp.json
+*.dproj
+*.res
 
 # Delphi local files (user-specific info)
 *.local
@@ -67,3 +70,7 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+# Other files
+clear.cmd
+*BadString*
